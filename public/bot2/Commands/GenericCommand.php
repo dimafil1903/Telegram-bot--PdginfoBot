@@ -55,14 +55,7 @@ class GenericCommand extends SystemCommand
         if (stripos($command, 'whois') === 0 && $this->telegram->isAdmin($user_id)) {
             return $this->telegram->executeCommand('whois');
         }
-       if($text=='/dep1'){
-           $data = [
-               'chat_id' => $chat_id,
-               'text'    => 'Інформації по деепутату',
-           ];
 
-            Request::sendMessage($data);
-       }
 
         $data = [
             'chat_id' => $chat_id,

@@ -13,26 +13,26 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 use Longman\TelegramBot\Commands\SystemCommand;
 
 /**
- * Channel post command
+ * Super group chat created command
  *
- * Gets executed when a new post is created in a channel.
+ * Gets executed when a super group chat is created.
  */
-class ChannelpostCommand extends SystemCommand
+class SupergroupchatcreatedCommand extends SystemCommand
 {
     /**
      * @var string
      */
-    protected $name = 'channelpost';
+    protected $name = 'supergroupchatcreated';
 
     /**
      * @var string
      */
-    protected $description = 'Handle channel post';
+    protected $description = 'Super group chat created';
 
     /**
      * @var string
      */
-    protected $version = '1.0.0';
+    protected $version = '1.1.0';
 
     /**
      * Command execute method
@@ -42,7 +42,8 @@ class ChannelpostCommand extends SystemCommand
      */
     public function execute()
     {
-        //$channel_post = $this->getUpdate()->getChannelPost();
+        //$message = $this->getMessage();
+        //$supergroup_chat_created = $message->getSuperGroupChatCreated();
 
         return parent::execute();
     }

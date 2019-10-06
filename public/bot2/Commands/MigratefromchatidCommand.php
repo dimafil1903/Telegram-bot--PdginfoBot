@@ -13,26 +13,26 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 use Longman\TelegramBot\Commands\SystemCommand;
 
 /**
- * Channel post command
+ * Migrate from chat id command
  *
- * Gets executed when a new post is created in a channel.
+ * Gets executed when a chat gets migrated.
  */
-class ChannelpostCommand extends SystemCommand
+class MigratefromchatidCommand extends SystemCommand
 {
     /**
      * @var string
      */
-    protected $name = 'channelpost';
+    protected $name = 'migratefromchatid';
 
     /**
      * @var string
      */
-    protected $description = 'Handle channel post';
+    protected $description = 'Migrate from chat id';
 
     /**
      * @var string
      */
-    protected $version = '1.0.0';
+    protected $version = '1.1.0';
 
     /**
      * Command execute method
@@ -42,7 +42,8 @@ class ChannelpostCommand extends SystemCommand
      */
     public function execute()
     {
-        //$channel_post = $this->getUpdate()->getChannelPost();
+        //$message = $this->getMessage();
+        //$migrate_from_chat_id = $message->getMigrateFromChatId();
 
         return parent::execute();
     }

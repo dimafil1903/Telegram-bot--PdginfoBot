@@ -13,26 +13,26 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 use Longman\TelegramBot\Commands\SystemCommand;
 
 /**
- * Channel post command
+ * New chat photo command
  *
- * Gets executed when a new post is created in a channel.
+ * Gets executed when the photo of a group or channel gets set.
  */
-class ChannelpostCommand extends SystemCommand
+class NewchatphotoCommand extends SystemCommand
 {
     /**
      * @var string
      */
-    protected $name = 'channelpost';
+    protected $name = 'newchatphoto';
 
     /**
      * @var string
      */
-    protected $description = 'Handle channel post';
+    protected $description = 'New chat Photo';
 
     /**
      * @var string
      */
-    protected $version = '1.0.0';
+    protected $version = '1.1.0';
 
     /**
      * Command execute method
@@ -42,7 +42,8 @@ class ChannelpostCommand extends SystemCommand
      */
     public function execute()
     {
-        //$channel_post = $this->getUpdate()->getChannelPost();
+        //$message = $this->getMessage();
+        //$new_chat_photo = $message->getNewChatPhoto();
 
         return parent::execute();
     }

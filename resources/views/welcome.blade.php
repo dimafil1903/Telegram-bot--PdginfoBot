@@ -27,6 +27,7 @@
     <link href="{{ asset('css/style.css')}}" rel=stylesheet>
     <style>.dropdown-item{margin: 5px}</style>
     <link href="{{ asset('css/responsive.css')}}" rel=stylesheet>
+    
 </head>
 <body>
 <div id=loader-wrapper>
@@ -172,7 +173,7 @@
                         <div class=col-sm-4>
                             <div class="statistic-block wow fadeInUp" data-wow-duration=1s data-wow-delay=0.5s>
                                 <h5 class=statistic-number><span class=count-element>{{$messages_count}}</span></h5>
-                                <p class=txt-400>Повідомлень</p>
+                                <p class=txt-400>Послуг в базі</p>
                             </div>
                         </div>
 
@@ -363,6 +364,16 @@
 <script src={{ asset('js/wow.js')}}></script>
 <script src={{ asset('js/custom.min.js')}}></script>
 <script>new WOW().init();</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35281283-10"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-35281283-10');
+</script>
+
 <!-- [if lt IE 9]>
 <script src={{ asset('js/html5shiv.js')}} type=text/javascript></script>
 <script src={{ asset('js/respond.min.js')}} type=text/javascript></script>

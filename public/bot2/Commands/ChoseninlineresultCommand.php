@@ -13,26 +13,26 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 use Longman\TelegramBot\Commands\SystemCommand;
 
 /**
- * Channel post command
+ * Chosen inline result command
  *
- * Gets executed when a new post is created in a channel.
+ * Gets executed when an item from an inline query is selected.
  */
-class ChannelpostCommand extends SystemCommand
+class ChoseninlineresultCommand extends SystemCommand
 {
     /**
      * @var string
      */
-    protected $name = 'channelpost';
+    protected $name = 'choseninlineresult';
 
     /**
      * @var string
      */
-    protected $description = 'Handle channel post';
+    protected $description = 'Chosen result query';
 
     /**
      * @var string
      */
-    protected $version = '1.0.0';
+    protected $version = '1.1.1';
 
     /**
      * Command execute method
@@ -42,7 +42,9 @@ class ChannelpostCommand extends SystemCommand
      */
     public function execute()
     {
-        //$channel_post = $this->getUpdate()->getChannelPost();
+        //Information about chosen result is returned
+        //$inline_query = $this->getChosenInlineResult();
+        //$query        = $inline_query->getQuery();
 
         return parent::execute();
     }

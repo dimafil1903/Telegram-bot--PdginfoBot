@@ -13,26 +13,26 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 use Longman\TelegramBot\Commands\SystemCommand;
 
 /**
- * Channel post command
+ * Edited message command
  *
- * Gets executed when a new post is created in a channel.
+ * Gets executed when a user message is edited.
  */
-class ChannelpostCommand extends SystemCommand
+class EditedmessageCommand extends SystemCommand
 {
     /**
      * @var string
      */
-    protected $name = 'channelpost';
+    protected $name = 'editedmessage';
 
     /**
      * @var string
      */
-    protected $description = 'Handle channel post';
+    protected $description = 'User edited message';
 
     /**
      * @var string
      */
-    protected $version = '1.0.0';
+    protected $version = '1.1.1';
 
     /**
      * Command execute method
@@ -42,7 +42,7 @@ class ChannelpostCommand extends SystemCommand
      */
     public function execute()
     {
-        //$channel_post = $this->getUpdate()->getChannelPost();
+        //$edited_message = $this->getEditedMessage();
 
         return parent::execute();
     }

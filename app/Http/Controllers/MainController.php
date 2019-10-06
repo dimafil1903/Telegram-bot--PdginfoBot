@@ -12,7 +12,7 @@ class MainController  extends Controller
     public function show()
     {
         $users_count = DB::table('user')->count();
-        $messages_count = DB::table('message')->count();
+        $messages_count = DB::table('digests')->count();
         $streets_count = DB::table('street')->count();
         $percent=$users_count/20000;
         $percent_echo= number_format($percent, 3, ',', ' ');

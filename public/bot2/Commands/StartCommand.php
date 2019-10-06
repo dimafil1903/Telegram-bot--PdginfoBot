@@ -45,7 +45,7 @@ class StartCommand extends SystemCommand
     /**
      * @var bool
      */
-    protected $private_only = true;
+    protected $private_only = false;
 
     /**
      * Command execute method
@@ -58,31 +58,23 @@ class StartCommand extends SystemCommand
     {
         $message = $this->getMessage();
         $from=$this->getMessage()->getText();
-        $keyboard = new Keyboard(
-            ['Довідник 📙', 'Депутати 👤'],
-            ['Транспорт 🚍', '*']
-        );
 
-        $keyboard->setResizeKeyboard(true)
-            ->setSelective(false);
+
+
         $chat_id = $message->getChat()->getId();
-
-        $data = [
-            'chat_id' => $chat_id,
-            'text'    => 'Вас вітає  бот Pidgorodne.info' . PHP_EOL . '/help щоб дізнатися про всі команди',
-
-        ];
-        $data2 = [
-            'chat_id' => $chat_id,
-            'text'    =>  'Оберіть кнопку нижче 👇',
-            'reply_markup' => $keyboard,
-        ];
         $data1 = [
             'chat_id' => $chat_id,
 
             'action'  => ChatAction::TYPING,
 
         ];
+        $data = [
+            'chat_id' => $chat_id,
+            'text'    => 'КУ',
+
+        ];
+
+
 
 
 
@@ -91,10 +83,8 @@ class StartCommand extends SystemCommand
         Request::sendChatAction($data1);
         sleep(1);
         Request::sendMessage($data);
-        sleep(1);
-        Request::sendChatAction($data1);
-        sleep(1);
-        Request::sendMessage($data2);
+
+
 
 
     }
